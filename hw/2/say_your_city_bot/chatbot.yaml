@@ -1,0 +1,16 @@
+# название проекта
+name: say-city-bot
+
+# точка входа
+entryPoint:
+  - main.sc
+
+# параметры NLU-сервиса CAILA:
+botEngine: v2 #тип классификатора
+language: ru # язык бота по умолчанию
+
+sts:
+    noMatchThreshold: 0.2
+
+caila:
+    noMatchThreshold: 0.2
