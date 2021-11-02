@@ -1,0 +1,17 @@
+<test>
+    <test-case>
+        <state>SuggestHelp</state>
+        <q> отлично </q>
+        <a state="/SuggestHelp/Accepted" text="Отлично"/>
+        <a state="/AskPhone" text="Для продолжения напишите, пожалуйста, мне ваш номер телефона."/>
+    </test-case>
+    
+    <test-case>
+        <state>SuggestHelp</state>
+        <q> нет </q>
+        <a state="/SuggestHelp/Rejected" text="Боюсь, что ничего другого я пока предложить не могу..."/>
+        <q> да </q>
+        <a state="/SuggestHelp/Accepted" text="Отлично"/>
+        <a state="/AskPhone" text="Для продолжения напишите, пожалуйста, мне ваш номер телефона."/>
+    </test-case>
+</test>

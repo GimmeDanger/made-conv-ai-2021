@@ -1,0 +1,22 @@
+name: zb-cailapub
+
+entryPoint: main.sc
+
+botEngine: v2
+language: ru
+
+injector:
+    botName: валерия
+
+tests:
+  include:
+    - test_goodbye.xml
+    - test_welcome.xml
+    - test_ask_phone.xml
+    - test_suggest_help.xml
+
+sts:
+    noMatchThreshold: 0.2
+
+caila:
+    noMatchThreshold: 0.2

@@ -1,0 +1,33 @@
+<test>
+    <test-case>
+        <q> здравствуйте </q>
+        <a text="Здравствуйте!" state="/Welcome"/>
+        <a text="Меня зовут Валерия." state="/Welcome"/>
+        <a text="Давайте я помогу вам купить билет на самолет, хорошо?" state="/SuggestHelp"/>
+    </test-case>
+    
+    <test-case>
+        <q> /start </q>
+        <a text="Здравствуйте!" state="/Welcome"/>
+        <a text="Меня зовут Валерия." state="/Welcome"/>
+        <a text="Давайте я помогу вам купить билет на самолет, хорошо?" state="/SuggestHelp"/>
+    </test-case>
+    
+    <test-case>
+        <state>AskPhone</state>
+        <q> /start </q>
+        <a text="Здравствуйте!" state="/Welcome"/>
+        <a text="Меня зовут Валерия." state="/Welcome"/>
+        <a text="Давайте я помогу вам купить билет на самолет, хорошо?" state="/SuggestHelp"/>
+    </test-case>
+    
+    <test-case>
+        <q> добрый день </q>
+        <a text="Простите, я не поняла. Переформулируйте, пожалуйста, свой запрос.!" state="/CatchAll"/>
+    </test-case>
+    
+    <test-case>
+        <q> что ты умеешь </q>
+        <a text="Простите, я не поняла. Переформулируйте, пожалуйста, свой запрос.!" state="/CatchAll"/>
+    </test-case>
+</test>    

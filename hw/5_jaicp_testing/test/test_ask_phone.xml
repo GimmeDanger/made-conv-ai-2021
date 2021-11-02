@@ -1,0 +1,49 @@
+<test>
+    <test-case>
+        <state>AskPhone</state>
+        <q> Отмена </q>
+        <a state="/SuggestHelp" text="Давайте я помогу вам купить билет на самолет, хорошо?"/>
+    </test-case>
+    
+    <test-case>
+        <state>AskPhone</state>
+        <q> Да </q>
+        <a state="/CatchAll" text="Простите, я не поняла. Переформулируйте, пожалуйста, свой запрос."/>
+    </test-case>
+    
+    
+    <test-case>
+        <state>AskPhone/Get</state>
+        <q> Да </q>
+        <a state="/CatchAll" text="Простите, я не поняла. Переформулируйте, пожалуйста, свой запрос."/>
+    </test-case>
+    
+    <test-case>
+        <state>AskPhone</state>
+        <q> 1231232132 </q>
+        <a state="/ConfirmPhone" text="Ваш номер 1231232132, верно?"/>
+        <q> не верно </q>
+        <a class="/ConfirmPhone/No" state="/AskPhone" text="Для продолжения напишите, пожалуйста, мне ваш номер телефона."/>
+    </test-case>
+    
+    <test-case>
+        <state>AskPhone</state>
+        <q> 1231232132 </q>
+        <a state="/ConfirmPhone" text="Ваш номер 1231232132, верно?"/>
+        
+        <q> да </q>
+        <a state="/ConfirmPhone/Yes" text="Хорошо"/>
+        <dateTime>2016-06-07 13:23:55</dateTime>
+        <a state="/DiscountInform" text="Хочу отметить, что вам крупно повезло! Сегодня (07.06) действует акция!"/>
+        <a state="/DiscountInform" text="Купите билет сегодня и получите скидку в 10% на следующую покупку!"/>
+        
+        <q> /start </q>
+        <a text="Здравствуйте!" state="/Welcome"/>
+        <a text="Меня зовут Валерия." state="/Welcome"/>
+        <a text="Давайте я помогу вам купить билет на самолет, хорошо?" state="/SuggestHelp"/>
+        
+        <q> давай </q>
+        <a state="/SuggestHelp/Accepted" text="Отлично"/>
+        <a state="/ConfirmPhone" text="Ваш номер 1231232132, верно?"/>
+    </test-case>
+</test>
