@@ -1,0 +1,26 @@
+<test>
+    <test-case>
+        <mockData>
+            <query>http://api.openweathermap.org/data/2.5/weather?APPID=<TOKEN>&amp;units=metric&amp;lang=ru&amp;q=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6</query>
+            <response type="json" status="200">
+                {
+                    "main": {
+                        "temp": 500
+                    },
+                    "weather": [
+                        {
+                            "description": "тестовая погода"
+                        }
+                    ]
+                }
+            </response>
+        </mockData>
+        <state>Direction</state>
+        <q> купи билет париж воронеж </q>
+        <a> Назовите дату отправления. </a>
+        <q> 8 ноября 2023 года </q>
+        <a state="/Direction"> 2023/11/8 отправляемся из города Париж в город Воронеж. </a>
+        <a state="/Weather"> В городе Воронеж сейчас тестовая погода, 500°C. </a>
+
+    </test-case>
+</test>    

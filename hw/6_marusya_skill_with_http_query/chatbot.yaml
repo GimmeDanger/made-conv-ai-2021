@@ -1,0 +1,20 @@
+name: zb-cailapub
+
+entryPoint: main.sc
+
+botEngine: v2
+language: ru
+
+injector:
+    botName: валерия
+    weatherApiKey: <TOKEN>
+
+tests:
+  include:
+    - test_weather_api.xml
+
+sts:
+    noMatchThreshold: 0.2
+
+caila:
+    noMatchThreshold: 0.2
